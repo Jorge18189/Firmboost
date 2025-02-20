@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LSA - Learn. Study. Achieve</title>
+        <link rel="icon" type="image/png" href="../imagenes/Savy.png">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+        <style>
+
+            .dark-mode .wave path {
+                fill: #1a1a1a;
+            }
+            .wave svg path {
+                fill: #fff;
+            }
+
+            .dark-mode .wave svg path {
+                fill: #000 !important;
+            }
+
+
+            .dark-mode {
+                background-color: #000000;
+                color: #ffffff;
+            }
+
+            .dark-mode body,
+            .dark-mode .contenedor,
+            .dark-mode .sobre-nosotros,
+            .dark-mode .sobre-savy,
+            .dark-mode .portafolio,
+            .dark-mode .cards .card,
+            .dark-mode footer,
+            .dark-mode .contenedor-footer {
+                background-color: #000000 !important;
+                color: #ffffff !important;
+            }
+
+
+            .dark-mode p {
+                color: #ffffff !important;
+            }
+
+
+            .dark-mode .contenido-textos h3 span {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.5);
+            }
+
+            .dark-mode nav > a {
+                color: #ffffff !important;
+            }
+
+
+            .wave svg path {
+                fill: #ffffff;
+            }
+
+            .dark-mode .wave svg path {
+                fill: #000000 !important;
+            }
+
+            header .textos-header h1,
+            header .textos-header h2,
+            header .textos-header h3 {
+                color: #ffffff !important;
+            }
+
+
+            .dark-mode .content-foo h4 {
+                color: #ffffff;
+                border-color: #ffffff;
+            }
+                        .dark-mode .titulo {
+                color: #ffffff;
+                border-color: #ffffff;
+            }
+
+            .dark-mode .content-foo p {
+                color: #ffffff;
+            }
+
+            .dark-mode .titulo-final {
+                color: #ffffff;
+            }
+
+
+            .theme-switch, .login-btn {
+                background: none;
+                border: 2px solid #fff;
+                color: #fff;
+                padding: 8px 15px;
+                cursor: pointer;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+                border-radius: 20px;
+                transition: 0.3s;
+                margin-left: 10px;
+            }
+
+            .theme-switch:hover, .login-btn:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(1.05);
+            }
+            .dark-mode .imagen-about-us {
+                content: url('imagenes/Savy.png') !important;
+            }
+.pricing-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background-color: #f8f9ff;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card.popular {
+    background-color: #fff;
+    border: 2px solid #6b46ff;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6b46ff;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1f36;
+    margin-bottom: 0.5rem;
+}
+
+.plan-description {
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-tag {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.original-price {
+    color: #a0aec0;
+    text-decoration: line-through;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+.discount-badge {
+    background-color: #ebedff;
+    color: #6b46ff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1f36;
+}
+
+.price-period {
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-left: 0.25rem;
+}
+
+.term-info {
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.choose-button {
+    width: 100%;
+    padding: 0.875rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border: 2px solid #6b46ff;
+}
+
+.choose-button.primary {
+    background-color: #6b46ff;
+    color: white;
+}
+
+.choose-button.secondary {
+    background-color: transparent;
+    color: #6b46ff;
+}
+
+.renewal-info {
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #1a1f36;
+    font-size: 0.875rem;
+}
+
+.feature-item::before {
+    content: "✓";
+    color: #10b981;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.feature-item.disabled::before {
+    content: "−";
+    color: #a0aec0;
+}
+
+.see-all {
+    color: #6b46ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.see-all::after {
+    content: "▼";
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+        </style>
+        <style>
+            .reveal {
+                position: relative;
+                opacity: 0;
+                transform: translateY(150px);
+                transition: all 1s ease;
+            }
+
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            .reveal-title {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.8s ease;
+            }
+
+            .reveal-title.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .contenedor.sobre-nosotros,
+            .portafolio,
+            .clientes,
+            .sobre-savy {
+                overflow: hidden;
+            }
+        </style>
+
+        <script>
+            function reveal() {
+                const reveals = document.querySelectorAll('.reveal');
+                const revealTitles = document.querySelectorAll('.reveal-title');
+
+                reveals.forEach(element => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        element.classList.add('active');
+                    }
+                });
+
+                revealTitles.forEach(title => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = title.getBoundingClientRect().top;
+                    const elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        title.classList.add('active');
+                    }
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const mainSections = document.querySelectorAll('.contenedor-sobre-nosotros, .galeria-port, .cards, .contenedor-sobre-savy,.intro-section,.section-team');
+                mainSections.forEach(section => {
+                    section.classList.add('reveal');
+                });
+
+                const titles = document.querySelectorAll('.titulo');
+                titles.forEach(title => {
+                    title.classList.add('reveal-title');
+                });
+
+                window.addEventListener('scroll', reveal);
+                reveal();
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="lsa-text">Firmboost</div>
+                <a href="#">Inicio</a>
+                <a href="#Acerca">Acerca de</a>
+                <a href="#Servicios">Nosotros</a>
+                <a href="#equipo">Equipo de Trabajo</a>
+                
+            </nav>
+
+            <section class="textos-header">
+                <h1>Firmboost</h1>
+                <h2>Innovacion y Tecnologia para tu bienestar</h2>
+            </section>
+            <div class="wave" style="height: 150px; overflow: hidden;">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
+                </svg>
+            </div>
+        </header>
+
+        <main>
+            <section class="intro-section">
+                <div class="intro-text">
+                    <h1 id="somos">Desarrollamos para el bienestar de tod@s</h1>
+                    <div class="contenido-textos">
+
+                    <p> En FirmBoost, nos dedicamos a crear software que realmente hace la vida más fácil.
+                        Somos un equipo de entusiastas de la tecnología que ama transformar ideas en soluciones
+                        prácticas. Ya sea que necesites una app a medida, un sitio web atractivo o simplemente
+                        quieras mejorar la forma en que tu empresa funciona, estamos aquí para ayudarte.</p></div>
+                </div>
+                <div class="intro-image">
+                    <img src="imagenes/Equipo.jpg">
+                </div>
+            </section>
+
+            <section class="contenedor sobre-nosotros" id="Acerca">
+                <h2 class="titulo">Nuestros productos</h2>
+                <div class="contenedor-sobre-nosotros">
+                    <img src="imagenes/Logoo.jpg" alt="" class="imagen-about-us">
+                    <div class="contenido-textos">
+                        <h3>L. S. A.</h3>
+                        <p>Nuestro objetivo es brindar una herramienta de alta calidad para 
+                            estudiantes de nivel medio superior, que les 
+                            ayude a elegir la carrera adecuada y los prepare
+                            de manera efectiva para ingresar a la educación 
+                            superior.</p>
+                            <button class="boton-lsa" onclick="window.open('https://lsa.great-site.net/', '_blank')">Ir a LSA</button>
+
+                    </div>
+                </div>
+            </section>
+            <section class="portafolio" id="Servicios">
+                <div class="contenedor">
+                    <h2 class="titulo">Sobre Nosotros</h2>
+                    <div class="galeria-port">
+                        <div class="imagen-port" style="cursor: pointer;">
+                            <img src="imagenes/img1.jpg" alt="">
+                            <div class="hover-galeria">
+                                <img src="img/icono1.png" alt="">
+                                <p>Misión</p>
+                            </div>
+                        </div>
+                        
+                        <div class="imagen-port"  style="cursor: pointer;">
+                            <img src="imagenes/img2.jpg" alt="">
+                            <div class="hover-galeria">
+                                <img src="img/icono1.png" alt="">
+                                <p>Visión</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port"  style="cursor: pointer;">
+                            <img src="imagenes/img3.jpg" alt="">
+                            <div class="hover-galeria">
+                                <img src="img/icono1.png" alt="">
+                                <p>Objetivo</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port" style="cursor: pointer;">
+                            <img src="imagenes/img1.jpg" alt="">
+                            <div class="hover-galeria">
+                                <img src="img/icono1.png" alt="">
+                                <p>Politicas</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port" style="cursor: pointer;">
+                            <img src="imagenes/img4.jpg" alt="">
+                            <div class="hover-galeria">
+                                <img src="img/icono1.png" alt="">
+                                <p>Valores</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port"  style="cursor: pointer;">
+                            <img src="imagenes/img5.jpg" alt="">
+                            <div class="hover-galeria">
+                                <img src="img/icono1.png" alt="">
+                                <p>Filosofia</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port"  style="cursor: pointer;">
+                            <img src="imagenes/img6.jpg" alt="">
+                            <div class="hover-galeria">
+                                <img src="img/icono1.png" alt="">
+                                <p>Estrategias</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port"  style="cursor: pointer;">
+                            <img src="imagenes/img7.jpg" alt="">
+                            <div class="hover-galeria">
+                                <img src="img/icono1.png" alt="">
+                                <p>Organigrama</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-team" id="equipo">
+                <h2 id="nosotros">Nuestro Equipo de Trabajo</h2>
+                <div class="grid-team">
+                    <div class="card-team">
+                        <img src="imagenes/Lau.png" alt="Foto de Laura Vicente">
+                        <h3>Laura Vicente</h3>
+                        <p>Especialista en marketing digital.</p>
+                        <a href="equipo/laura.html" class="btn-secondary">Leer más</a>
+                    </div>
+                    <div class="card-team">
+                        <img src="imagenes/Andy3.jpg" alt="Foto de Andres Hernández">
+                        <h3>Andres Hernández</h3>
+                        <p>Diseñador gráfico.</p>
+                        <a href="equipo/andres.html" class="btn-secondary">Leer más</a>
+                    </div>
+                    <div class="card-team">
+                        <img src="imagenes/Zian.jpeg" alt="Foto de Zianya Barrera">
+                        <h3>Zianya Barrera</h3>
+                        <p>Especialista en CEO.</p>
+                        <a href="equipo/zianya.html" class="btn-secondary">Leer más</a>
+                    </div>
+                    <div class="card-team">
+                        <img src="imagenes/Jorch.jpg" alt="Foto de Jorge Hernández">
+                        <h3>Jorge Hernández</h3>
+                        <p>Desarrollador web especializado e front-end.</p>
+                        <a href="equipo/jorge.html" class="btn-secondary">Leer más</a>
+                    </div>
+                    <div class="card-team">
+                        <img src="imagenes/Andy3.jpg" alt="Foto de Jorge Hernández">
+                        <h3>Claudia Esmeralda</h3>
+                        <p>Especialista en backend.</p>
+                        <a href="equipo/claudia.html" class="btn-secondary">Leer más</a>
+                    </div>
+                </div>
+            </section>
+            
+
+
+           
+            
+           <style>
+.pricing-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background-color: #f8f9ff;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card.popular {
+    background-color: #fff;
+    border: 2px solid #6b46ff;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6b46ff;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1f36;
+    margin-bottom: 0.5rem;
+}
+
+.plan-description {
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-tag {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.original-price {
+    color: #a0aec0;
+    text-decoration: line-through;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+.discount-badge {
+    background-color: #ebedff;
+    color: #6b46ff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1f36;
+}
+
+.price-period {
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-left: 0.25rem;
+}
+
+.term-info {
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.choose-button {
+    width: 100%;
+    padding: 0.875rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border: 2px solid #6b46ff;
+}
+
+.choose-button.primary {
+    background-color: #6b46ff;
+    color: white;
+}
+
+.choose-button.secondary {
+    background-color: transparent;
+    color: #6b46ff;
+}
+
+.renewal-info {
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #1a1f36;
+    font-size: 0.875rem;
+}
+
+.feature-item::before {
+    content: "✓";
+    color: #10b981;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.feature-item.disabled::before {
+    content: "−";
+    color: #a0aec0;
+}
+
+.see-all {
+    color: #6b46ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.see-all::after {
+    content: "▼";
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+</style>
+
+
+            <script>
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault(); // Prevenir el comportamiento predeterminado
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                        }
+                    });
+                });
+            </script>
+
+            <section class="contenedor sobre-nosotros" >
+                <h2 class="titulo">Tu Nueva Amiga "Savy"</h2>
+                <div class="contenedor-sobre-nosotros">
+                    <img src="imagenes/saltando.png" alt="" class="imagen-about-us">
+                    <div class="contenido-textos">
+                        <p> En FirmBoost, nos dedicamos a crear software que realmente hace la vida más fácil.
+                            Somos un equipo de entusiastas de la tecnología que ama transformar ideas en soluciones
+                            prácticas. Ya sea que necesites una app a medida, un sitio web atractivo o simplemente
+                            quieras mejorar la forma en que tu empresa funciona, estamos aquí para ayudarte.</p></div>
+                    </div>
+                </div>
+            </section>
+
+
+ <!-- Carrusel añadido aquí -->
+<div class="carousel-container">
+    <div class="carousel-slides">
+        <div class="carousel-slide">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Misión">
+            <h2>Misión</h2>
+            <p>En Firmboost, nos dedicamos a desarrollar y ofrecer plataformas de software intuitivas, personalizables y escalables. Nuestro enfoque es generar proyectos a la medida para diversas empresas, permitiéndoles contar con un aliado tecnológico confiable que impulse su éxito empresarial a través de una buena gestión de sus necesidades particulares.</p>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://cdn-icons-png.flaticon.com/512/1995/1995485.png" alt="Visión">
+            <h2>Visión</h2>
+            <p>Aspiramos a optimizar las necesidades de cada uno de nuestros clientes a través de soluciones de software que les permitan tomar decisiones informadas y eficiente, impulsando su crecimiento y rentabilidad mediante un enfoque colaborativo y transparente, con el objetivo de consolidarnos como una empresa líder en el desarrollo de software.</p>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://cdn-icons-png.flaticon.com/512/1006/1006585.png" alt="Valores">
+            <h2>Valores</h2>
+            <p>Innovación: Creamos soluciones tecnológicas pioneras que superan expectativas.
+                Responsabilidad: Desarrollamos tecnología ética para el bienestar social.
+                Colaboración: Impulsamos el trabajo en equipo para mejores resultados.</p>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://cdn-icons-png.flaticon.com/512/1570/1570912.png" alt="Políticas">
+            <h2>Políticas</h2>
+            <p>Responsabilidad Ética: Respetamos valores éticos y derechos humanos.
+                Calidad: Garantizamos productos y servicios de alta calidad.
+                Seguridad de Datos: Protegemos la privacidad y seguridad de los datos.</p>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135767.png" alt="Estrategias">
+            <h2>Estrategias</h2>
+            <p>Invertiremos en tecnología avanzada, incluyendo IA, para mantenernos a la vanguardia. Estableceremos alianzas con empresas e instituciones para acelerar la innovación y expandirnos a nuevos mercados. Nos centraremos en ofrecer soluciones intuitivas que generen valor real para los usuarios.</p>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135797.png" alt="Organigrama">
+            <h2>Organigrama</h2>
+            <img src="imagenes/organi.jpg" width="1000px" alt="Descripción de la imagen" class="img-grande-organigrama">
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135803.png" alt="Filosofía">
+            <h2>Filosofía</h2>
+            <p>La filosofía de Firmboost se basa en la innovación, la comunicación asertiva y la transparencia, tanto entre nuestros clientes como con nuestros colaboradores, confiando mutuamente para establecer relaciones productivas que impulsen el crecimiento y el logro de objetivos comunes.</p>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135810.png" alt="Objetivo">
+            <h2>Objetivo</h2>
+            <p>Buscamos optimizar sus procesos, mejorar la toma de decisiones y aumentar su rentabilidad mediante tecnología avanzada, asegurando un crecimiento sostenible y una relación a largo plazo basada en la confianza y la excelencia en el servicio.</p>
+        </div>
+    </div>
+
+    <div class="carousel-navigation">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="carousel-dots">
+        <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+        <span class="carousel-dot" onclick="goToSlide(1)"></span>
+        <span class="carousel-dot" onclick="goToSlide(2)"></span>
+        <span class="carousel-dot" onclick="goToSlide(3)"></span>
+        <span class="carousel-dot" onclick="goToSlide(4)"></span>
+        <span class="carousel-dot" onclick="goToSlide(5)"></span>
+        <span class="carousel-dot" onclick="goToSlide(6)"></span>
+        <span class="carousel-dot" onclick="goToSlide(7)"></span>
+    </div>
+</div>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelector('.carousel-slides');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    function showSlide(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        currentSlide = index;
+    }
+
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % dots.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + dots.length) % dots.length;
+        showSlide(currentSlide);
+    }
+
+    function goToSlide(index) {
+        showSlide(index);
+    }
+
+    setInterval(nextSlide, 5000);
+</script>
+
+
+
+        </main>
+        <footer>
+            <div class="contenedor-footer">
+                <div class="content-foo">
+                    <h4>Acerca de:</h4>
+                    <p><a href="https://firmboost.gerdoc.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">Empresa</a></p>
+                    <p><a href="https://firmboost.gerdoc.com/#nosotros" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">Equipo</a></p>
+                </div>
+                <div class="content-foo">
+                    <h4>Recursos</h4>
+                    <p>Examenes</p>
+                    <p>FODA</p>
+                </div>
+                <div class="content-foo">
+                    <h4>Contacto</h4>
+                    <p>firmboost@gmail.com</p>
+                    <p>5561728392</p>                
+                </div>
+            </div>
+            <h2 class="titulo-final">&copy; Firmboost | Muchas Gracias!</h2>
+        </footer>
+    </body>
+</html>
